@@ -5,6 +5,8 @@ import Intro from './components/Intro';
 import Proyectos from './components/Proyectos';
 import Noticias from './components/Noticias';
 import { obtenerPerfil, obtenerProyectos, obtenerNoticias } from './services/dataService';
+import ContactForm from './components/ContactForm';
+import PiePagina from './components/PiePagina';
 
 
 const ENLACES = [
@@ -55,7 +57,9 @@ function App() {
         <Intro {...perfil} />
         <Proyectos proyectos={proyectos} />
         <Noticias noticias={noticias} />
+        <ContactForm />
       </main>
+      <PiePagina nombre={perfil.nombre} github={perfil.github} linkedin={perfil.linkedin} />
     </>
   );
 }
