@@ -202,7 +202,7 @@ Estado: **A** = Aprobado.
 | PM-02 | Responsividad en tablet | Modo dispositivo → iPad | 2 tarjetas por fila | A |
 | PM-03 | Navegación por teclado | Recorrer la página con Tab y Enter | Todos los enlaces, botones y campos son alcanzables y el foco es visible | A |
 | PM-04 | Navegación del menú | Clic en cada enlace del menú | Desplazamiento suave hasta cada sección, sin quedar tapada por la barra | A |
-| PM-05 | Sitio publicado | Abrir la URL de GitHub Pages | Carga imágenes y datos JSON correctamente | Pendiente |
+| PM-05 | Sitio publicado | Abrir la URL de GitHub Pages | Carga imágenes y datos JSON correctamente | A |
 
 ## 9. Resultados
 
