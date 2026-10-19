@@ -25,7 +25,11 @@ function Proyectos({ proyectos }) {
       <Container>
         <h2 className="text-center mb-4">Proyectos</h2>
 
-        <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <div
+          role="group"
+          aria-label="Filtrar por tecnología"
+          className="d-flex flex-wrap justify-content-center gap-2 mb-4"
+        >
           {tecnologias.map((tec) => (
             <Button
               key={tec}
