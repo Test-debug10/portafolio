@@ -52,8 +52,11 @@ function App() {
 
   return (
     <>
+      <a href="#contenido" className="visually-hidden-focusable">
+        Saltar al contenido
+      </a>
       <BarraNavegacion marca="Mi Portafolio" enlaces={ENLACES} />
-      <main>
+      <main id="contenido" tabIndex={-1}>
         <Intro {...perfil} />
         <Proyectos proyectos={proyectos} />
         <Noticias noticias={noticias} />

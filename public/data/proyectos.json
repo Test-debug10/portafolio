@@ -3,7 +3,7 @@
     "id": 1,
     "titulo": "Proyecto 1",
     "descripcion": "Pagina de One Pice",
-    "imagen": "img/proyecto1.jpg",
+    "imagen": "img/proyecto1.webp",
     "tecnologias": ["HTML", "CSS", "JavaScript"],
     "enlace": "https://github.com/Test-debug10"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "titulo": "Proyecto 2",
     "descripcion": "Pagina con elementos",
-    "imagen": "img/proyecto2.png",
+    "imagen": "img/proyecto2.webp",
     "tecnologias": ["React", "Bootstrap"],
     "enlace": "https://github.com/Test-debug10"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "titulo": "Proyecto 3",
     "descripcion": "Pagina con carrito",
-    "imagen": "img/proyecto3.png",
+    "imagen": "img/proyecto3.webp",
     "tecnologias": ["Java", "MySQL"],
     "enlace": "https://github.com/Test-debug10"
   }
