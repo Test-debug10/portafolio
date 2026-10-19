@@ -11,7 +11,7 @@ function BarraNavegacion({ marca, enlaces }) {
     <Navbar bg="dark" data-bs-theme="dark" expand="lg" fixed="top">
       <Container>
         <Navbar.Brand href="#introduccion">{marca}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="menu-principal" aria-label="Abrir menú" />
+        <Navbar.Toggle aria-controls="menu-principal" label="Abrir menú" />
         <Navbar.Collapse id="menu-principal">
           <Nav className="ms-auto">
             {enlaces.map((enlace) => (
