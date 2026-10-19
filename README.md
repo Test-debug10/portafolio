@@ -253,4 +253,4 @@ Cada componente está documentado con comentarios JSDoc en su archivo.
 
 ---
 
-**Autor:** Tu Nombre · [GitHub](https://github.com/Test-debug10)
+**Autor:** Jose Valderrama · [GitHub](https://github.com/Test-debug10)
