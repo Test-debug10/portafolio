@@ -11,6 +11,12 @@
       "titulo": "Elon Musk y su vehiculo volador",
       "fecha": "2026-10-10",
       "contenido": "Un vehiculo volador nuevo de la compañia, el futuro?"
+    },
+    {
+      "id": 3,
+      "titulo": "Crean una super computadora",
+      "fecha": "2026-09-28",
+      "contenido": "Puede ser el inicio de una computadora cuantica?"
     }
   ],
   "personales": [
@@ -25,6 +31,12 @@
       "titulo": "Publiqué mi portafolio",
       "fecha": "2026-10-19",
       "contenido": "Mi portafolio ya está disponible en GitHub Pages."
+    },
+    {
+      "id": 2,
+      "titulo": "Arregle todo mi portafolio",
+      "fecha": "2026-10-19",
+      "contenido": "Mi portafolio ya está disponible en GitHub Pages totlamente actualizado"
     }
   ]
 }

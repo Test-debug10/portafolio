@@ -3,7 +3,9 @@ import { Spinner, Alert, Container } from 'react-bootstrap';
 import BarraNavegacion from './components/BarraNavegacion';
 import Intro from './components/Intro';
 import Proyectos from './components/Proyectos';
-import { obtenerPerfil, obtenerProyectos } from './services/dataService';
+import Noticias from './components/Noticias';
+import { obtenerPerfil, obtenerProyectos, obtenerNoticias } from './services/dataService';
+
 
 const ENLACES = [
   { texto: 'Introducción', href: '#introduccion' },
@@ -15,14 +17,15 @@ const ENLACES = [
 function App() {
   const [perfil, setPerfil] = useState(null);
   const [proyectos, setProyectos] = useState([]);
+  const [noticias, setNoticias] = useState({ tecnologia: [], personales: [] });
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Promise.all espera a que ambos JSON terminen de cargar
-    Promise.all([obtenerPerfil(), obtenerProyectos()])
-      .then(([datosPerfil, datosProyectos]) => {
+    Promise.all([obtenerPerfil(), obtenerProyectos(), obtenerNoticias()])
+      .then(([datosPerfil, datosProyectos, datosNoticias]) => {
         setPerfil(datosPerfil);
         setProyectos(datosProyectos);
+        setNoticias(datosNoticias);
       })
       .catch((err) => setError(err.message));
   }, []);
@@ -51,6 +54,7 @@ function App() {
       <main>
         <Intro {...perfil} />
         <Proyectos proyectos={proyectos} />
+        <Noticias noticias={noticias} />
       </main>
     </>
   );
