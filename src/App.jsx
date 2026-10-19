@@ -1,17 +1,29 @@
 import { useState, useEffect } from 'react';
 import { Spinner, Alert, Container } from 'react-bootstrap';
+import BarraNavegacion from './components/BarraNavegacion';
 import Intro from './components/Intro';
-import { obtenerPerfil } from './services/dataService';
+import Proyectos from './components/Proyectos';
+import { obtenerPerfil, obtenerProyectos } from './services/dataService';
+
+const ENLACES = [
+  { texto: 'Introducción', href: '#introduccion' },
+  { texto: 'Proyectos', href: '#proyectos' },
+  { texto: 'Noticias', href: '#noticias' },
+  { texto: 'Contacto', href: '#contacto' },
+];
 
 function App() {
-  // Estado: al inicio el perfil está vacío (null)
   const [perfil, setPerfil] = useState(null);
+  const [proyectos, setProyectos] = useState([]);
   const [error, setError] = useState(null);
 
-  // useEffect se ejecuta una vez, cuando la página se carga
   useEffect(() => {
-    obtenerPerfil()
-      .then((datos) => setPerfil(datos))   // guarda el JSON en el estado
+    // Promise.all espera a que ambos JSON terminen de cargar
+    Promise.all([obtenerPerfil(), obtenerProyectos()])
+      .then(([datosPerfil, datosProyectos]) => {
+        setPerfil(datosPerfil);
+        setProyectos(datosProyectos);
+      })
       .catch((err) => setError(err.message));
   }, []);
 
@@ -34,9 +46,13 @@ function App() {
   }
 
   return (
-    <main>
-      <Intro {...perfil} />
-    </main>
+    <>
+      <BarraNavegacion marca="Mi Portafolio" enlaces={ENLACES} />
+      <main>
+        <Intro {...perfil} />
+        <Proyectos proyectos={proyectos} />
+      </main>
+    </>
   );
 }
 
